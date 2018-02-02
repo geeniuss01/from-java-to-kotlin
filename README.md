@@ -676,6 +676,41 @@ internal lateinit var person: Person
 
 ---
 
+> Java
+
+```java
+// extending classes
+class A {
+    public int doubleIt(int x) {
+        return  x * 2;
+    }
+}
+
+class B extends A {
+    public int doubleIt(int x) {
+        return x + x;
+    }
+}
+```
+
+> Kotlin
+
+```kotlin
+open class A {
+    open fun doubleIt(x: Int): Int {
+        return x * 2
+    }
+}
+
+class B : A() {
+    override fun doubleIt(x: Int): Int {
+        return x + x
+    }
+}
+```
+
+
+---
 ### Important things to know in Kotlin
 * [Learn Kotlin - lateinit vs lazy](https://mindorks.com/blog/learn-kotlin-lateinit-vs-lazy)
 * [Learn Kotlin - apply vs with](https://mindorks.com/blog/learn-kotlin-apply-vs-with)
